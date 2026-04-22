@@ -16,7 +16,7 @@ export function HouseholdList() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/excel/list')
+    fetch('http://localhost:8001/api/excel/list')
       .then(res => res.json())
       .then(data => {
         setHouseholds(data.households || [])
