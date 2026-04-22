@@ -1,0 +1,80 @@
+.household-list {
+  padding: var(--spacing-6);
+}
+
+.household-list.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--text-secondary);
+}
+
+.household-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.household-header h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.household-count {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.household-table {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: var(--spacing-4) var(--spacing-5);
+  background: var(--bg-hover);
+  font-weight: var(--font-medium);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: var(--spacing-4) var(--spacing-5);
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background: var(--bg-hover);
+}
+
+.table-row .name {
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+.table-row span {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.table-empty {
+  padding: var(--spacing-10) var(--spacing-5);
+  text-align: center;
+  color: var(--text-secondary);
+}
