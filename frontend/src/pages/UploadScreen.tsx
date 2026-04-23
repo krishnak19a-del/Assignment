@@ -47,7 +47,7 @@ export function UploadScreen() {
     formData.append('file', file)
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/excel/upload', {
+      const response = await fetch('http://localhost:8001/api/excel/upload', {
         method: 'POST',
         body: formData,
       })
@@ -72,7 +72,8 @@ export function UploadScreen() {
     <div className="home-screen">
       <header className="home-header">
         <div className="header-left">
-          <img onClick={()=>navigate("/")} src="https://framerusercontent.com/images/N6Uwuf7uPvLFuZptoPWYC2d5Q.png" alt="Logo" className="header-logo" />
+          <img onClick={()=>navigate("/")} src="https://console.fasttrackr.ai/images/ft-new-logo.svg" alt="Logo" className="header-logo" />
+          <p className="header-log-text">FastTrackr AI</p>
         </div>
         <div className="header-right">
           <button className="nav-btn" onClick={() => navigate('/dashboard/households')}>
@@ -152,7 +153,7 @@ export function UploadScreen() {
               </>
             ) : (
               <>
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.5">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                   <polyline points="17 8 12 3 7 8" />
                   <line x1="12" y1="3" x2="12" y2="15" />

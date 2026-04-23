@@ -15,17 +15,70 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--spacing-6);
+  gap: var(--spacing-4);
+}
+
+.household-header .header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
 }
 
 .household-header h2 {
   font-size: var(--text-2xl);
   font-weight: var(--font-bold);
   color: var(--text-primary);
+  margin: 0;
 }
 
 .household-count {
   font-size: var(--text-sm);
   color: var(--text-secondary);
+}
+
+.upload-btn-household {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-weight: var(--font-medium);
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.upload-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: #4f46e5;
+  border-radius: 6px;
+  color: white;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.upload-btn-household:hover:not(:disabled) {
+  color: #4f46e5;
+}
+
+.upload-btn-household:hover:not(:disabled) .upload-icon {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+.upload-btn-household:active:not(:disabled) .upload-icon {
+  transform: translateY(0);
+}
+
+.upload-btn-household:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .household-table {
