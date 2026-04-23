@@ -19,7 +19,7 @@ export function UploadScreen() {
   const [stats, setStats] = useState<QuickStats | null>(null)
 
   useEffect(() => {
-    fetch('http://localhost:8001/api/excel/insights/data')
+    fetch('http://demo.mandlix.com/api/excel/insights/data')
       .then(res => res.json())
       .then(data => {
         if (data.insights) {
@@ -47,14 +47,14 @@ export function UploadScreen() {
     formData.append('file', file)
 
     try {
-      const response = await fetch('http://localhost:8001/api/excel/upload', {
+      const response = await fetch('http://demo.mandlix.com/api/excel/upload', {
         method: 'POST',
         body: formData,
       })
       const data = await response.json()
       console.log('Upload response:', data)
       
-      const statsRes = await fetch('http://localhost:8001/api/excel/insights/data')
+      const statsRes = await fetch('http://demo.mandlix.com/api/excel/insights/data')
       const statsData = await statsRes.json()
       if (statsData.insights) {
         setStats(statsData.insights.summary)

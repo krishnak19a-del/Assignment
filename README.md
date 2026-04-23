@@ -132,8 +132,8 @@ Assignment/
    ```bash
    uvicorn main:app --reload
    ```
-   The API will be available at `http://localhost:8001`
-   API documentation: `http://localhost:8001/docs`
+   The API will be available at `http://demo.mandlix.com`
+   API documentation: `http://demo.mandlix.com/docs`
 
 ### Frontend Setup
 

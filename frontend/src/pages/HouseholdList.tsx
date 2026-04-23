@@ -18,7 +18,7 @@ export function HouseholdList() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://localhost:8001/api/excel/list')
+    fetch('http://demo.mandlix.com/api/excel/list')
       .then(res => res.json())
       .then(data => {
         setHouseholds(data.households || [])
@@ -45,7 +45,7 @@ export function HouseholdList() {
     formData.append('file', file)
 
     try {
-      const response = await fetch('http://localhost:8001/api/excel/upload', {
+      const response = await fetch('http://demo.mandlix.com/api/excel/upload', {
         method: 'POST',
         body: formData,
       })
@@ -53,7 +53,7 @@ export function HouseholdList() {
       console.log('Upload response:', data)
       
       // Refresh household list
-      const listRes = await fetch('http://localhost:8001/api/excel/list')
+      const listRes = await fetch('http://demo.mandlix.com/api/excel/list')
       const listData = await listRes.json()
       setHouseholds(listData.households || [])
     } catch (error) {

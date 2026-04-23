@@ -59,7 +59,7 @@ export function HouseholdDetail() {
   const [err, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch(`http://localhost:8001/api/excel/${id}`)
+    fetch(`http://demo.mandlix.com/api/excel/${id}`)
       .then(res => res.json())
       .then(data => {
         setHousehold(data.household)
@@ -102,7 +102,7 @@ export function HouseholdDetail() {
     setSuccessMessage(null)
 
     try {
-      const url = `http://localhost:8001/api/household/uploadAudio`
+      const url = `http://demo.mandlix.com/api/household/uploadAudio`
       
       const response = await fetch(url, {
         method: 'POST',
