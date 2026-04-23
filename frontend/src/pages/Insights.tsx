@@ -37,7 +37,7 @@ export function Insights() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('http://demo.mandlix.com/api/excel/insights/data')
+    fetch('https://demo.mandlix.com/api/excel/insights/data')
       .then(res => res.json())
       .then(data => {
         setInsights(data.insights)
