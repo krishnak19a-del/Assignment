@@ -3,7 +3,7 @@ from services import sheet_service, household_service
 from database import get_db
 from sqlalchemy.orm import Session
 
-router = APIRouter(prefix="/api/excel", tags=["Excel Sheet"])
+router = APIRouter(prefix="/excel", tags=["Excel Sheet"])
 
 
 @router.post("/upload")

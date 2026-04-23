@@ -7,7 +7,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api/household", tags=["Excel Sheet"])
+router = APIRouter(prefix="/household", tags=["Excel Sheet"])
 
 @router.post("/uploadAudio")
 async def upload_audio(file: UploadFile = File(...), db: Session = Depends(get_db)):
